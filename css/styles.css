@@ -1,0 +1,21 @@
+.box{
+  height: 50px;
+  width: 300px;
+  border-radius: 2px;
+  border-color: black;
+  border-style: solid;
+  background-color: rgba(255, 0, 0, 0.5)
+}
+.khaki{
+  background-color: rgb(240, 230, 140);
+}
+.edit{
+  height: 50px;
+  width: 100px;
+  background-color: pink;
+}
+.delete{
+  height: 50px;
+  width: 100px;
+  background-color: darkred;
+}
