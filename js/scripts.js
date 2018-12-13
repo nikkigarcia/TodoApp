@@ -1,32 +1,27 @@
-// var toDo = ["Buy Cake"];
-// var input = prompt("What would you like to do?");
-// while(input !== "quit"){
-//   if(input === "list"){
-//     listtoDo();
-//   } else if (input === "add"){
-//     addtoDo();
-//   }else if(input === "delete"){
-//     deletetoDo();
-//   }
-//   input = prompt("What would you like to do")
-// }
-// console.log("Ok, You quit the app.");
+// const message = prompt("'Hello, thank you for choosing Nikki's toDo App! What would you like to name this list?");
+// console.log(message);
 //
-// function listtoDo(){
-//   console.log("listtoDo")
-//   toDo.forEach(function(toDo, i){
-//     console.log(i + "! " + toDo);
-//   });
-//   console.log("listtoDo")
-// }
+// const header = document.createTextNode(message);
+// const newHeader = document.createElement('h2');
+// newHeader.appendChild(message);
+// document.getElementById('nameOfList').appendChild(newHeader);
 //
-// function addtoDo(){
-//   var addtoDo = prompt ("Add to List");
-// }
 
-// const input = prompt('What do you want to add to your list?');
-// forEach(input)
-const addToList = document.querySelector('add');
-add.textContent = 'Add To List';
-add.addEventListener = ('click', () => prompt('What do you want to add to your list?'));
-document.body.appendChild('add');
+
+function toDoList(){
+
+  const item = document.getElementById('toDoInput').value
+  const text = document.createTextNode(item);
+  const newItem = document.createElement('li');
+  const deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'Delete';
+    deleteBtn.addEventListener('click', deleteItem);
+  newItem.appendChild(text);
+  newItem.appendChild(deleteBtn);
+  document.getElementById('toDoList').appendChild(newItem);
+  document.forms[0].reset();
+}
+function deleteItem(){
+  console.log(this.parentNode);
+  this.parentNode.style.display ="none";
+}
